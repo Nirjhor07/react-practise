@@ -1,11 +1,30 @@
 import "./App.css";
 import ToDo from "./todo";
+import Player from "./Player";
+import Persons from "./Persons";
+
+const players = ["akash", "jamal", "kamal"];
+const personss = [
+  { id: 1, name: "Akash", age: 17, isGood: true },
+  { id: 2, name: "Nirjhor", age: 20, isGood: false },
+  { id: 3, name: "Jani nah", age: 12, isGood: true },
+];
 
 function App() {
   return (
     <>
+      {/* adding players dynamically  */}
+      {players.map((player) => (
+        <Player player={player}></Player>
+      ))}
+
+      {/* adding objects dynamically */}
+      {personss.map((person) => (
+        <Persons key={person.id} person={person}></Persons>
+      ))}
+
       <ToDo name="Nirjhor" amVirgin={true}></ToDo>
-      <ToDo name="Akash" amVirgin={false} ></ToDo>
+      <ToDo name="Akash" amVirgin={false}></ToDo>
       <Footballer name="Ronaldo" age="40" bestPl="Yes"></Footballer>
       <Footballer name="Messi" age="38" bestPl="No"></Footballer>
       <Footballer name="Neymar" age="35" bestPl="No"></Footballer>
