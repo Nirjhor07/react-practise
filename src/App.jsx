@@ -1,8 +1,11 @@
 import "./App.css";
+import ToDo from "./todo";
 
 function App() {
   return (
     <>
+      <ToDo name="Nirjhor" amVirgin={true}></ToDo>
+      <ToDo name="Akash" amVirgin={false} ></ToDo>
       <Footballer name="Ronaldo" age="40" bestPl="Yes"></Footballer>
       <Footballer name="Messi" age="38" bestPl="No"></Footballer>
       <Footballer name="Neymar" age="35" bestPl="No"></Footballer>
